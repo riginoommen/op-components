@@ -70,7 +70,6 @@ $variables: (
   border-bottom-right-radius: .25rem;
   box-shadow: 0 .25rem .5rem rgba(0,0,0,.24);
   overflow: hidden;
-
   transition: all var(--op-transition--default);
   display: block;
   opacity: 0;
@@ -92,7 +91,6 @@ $variables: (
   text-align: center;
 }
 
-// Patternfly Styles
 .feedback-subtitle {
   color: var(--pf-global--Color--200);
 }
@@ -103,13 +101,15 @@ $variables: (
 }
 .feedback-chip:hover {
   cursor: pointer;
-  background-color: #E5EFFA;
 }
 
 .feedback-chip-active {
-  background-color: #E5EFFA !important;
+  --pf-c-chip--BackgroundColor:#0066CC1A !important;
 }
 
+.pointer {
+  cursor: pointer;
+}
 .pf-c-button {
   background-color: opc-get-var(BackgroundColor, $opc-color--red-200, submitBtnBgColor);
   color: opc-get-var(TextColor, $opc-color--white, submitBtnTextColor);

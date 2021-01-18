@@ -51,12 +51,14 @@ export class AppModule { }
 import '@one-platform/opc-feedback/dist/opc-feedback';
 ```
 
-#### Inject the component to the index of your app
-
+#### Inject the component to the index of your app.
 ```html
 <opc-feedback>
 </opc-feedback>
 ```
+
+### Properties
+```url``` - This allows to link your spa associated with feedback. By default ```/feedback``` is the url.
 
 ### Event Handling
 ```opc-feedback``` emits the data on submit operation. You can use the data for sending it to backend.
@@ -74,7 +76,6 @@ npm run dev opc-feedback
 ```
 
 ### Build
-
 ```sh
 npm run build opc-feedback
 ```
