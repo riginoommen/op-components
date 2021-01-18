@@ -16,6 +16,10 @@
     "name": "Rigin Oommen",
     "email": "riginoommen@gmail.com"
   },
+  "contributors": [{
+    "name": "Sumeet Ingole",
+    "email": "gsumitingole.com@gmail.com"
+  }],
   "main": "dist/opc-feedback.js",
   "license": "MIT",
   "devDependencies": {

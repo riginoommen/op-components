@@ -16,7 +16,7 @@
     </opc-feedback>
     <script>
         document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (data) => {
-            console.log(data);
+            console.log(data.detail.data);
         });
     </script>
 </body>

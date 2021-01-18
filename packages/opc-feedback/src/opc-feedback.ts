@@ -1,7 +1,20 @@
+/**
+ * Copyright (c) 2021 Red Hat One Platform
+ *
+ * MIT
+ *
+ * opc-feedback.ts enables the user to collect the feedback from the user
+ *
+ * @summary opc-feedback.ts will set the properties 
+ * @author Rigin Oommen
+ *
+ * Created at     : 2021-01-18 14:53:24 
+ * Last modified  : 2021-01-18 18:20:24
+ */
+
 import { LitElement, html, property, customElement, internalProperty } from 'lit-element';
 import style  from './opc-feedback.scss';
 import { repeat } from 'lit-html/directives/repeat.js';
-const fetch = require( 'node-fetch' );
 
 @customElement('opc-feedback')
 export class OpcFeedback extends LitElement {

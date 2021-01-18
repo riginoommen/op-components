@@ -4,57 +4,27 @@
 ![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/1-Platform/op-components/graphs/commit-activity)
 
-Feedback Component is used to submit feedback
+Feedback Component is used to collect feedback from end user.
 
 ## Prerequisites
-<!-- Add if any -->
-
-## Usage
-<!-- Add usage here -->
-
-```html
-<opc-feedback></opc-feedback>
-```
-
-## Slots
-<!-- Add Slots here -->
-
-## Attributes
-<!-- Add attributes here -->
-
-## Themes
-<!-- Change colors here -->
-
-| color   | hex                                                              |
-|---------|------------------------------------------------------------------|
-| default | <span class="readme-color-preview" style="--bg:#ffffff"></span> #ffffff |
+#### Development Environment
+* NodeJS >= 8
+* IDE (VSCode/Atom)
+* Browser (Mozilla Firefox/Google Chrome)
 
 ## Install
-
-```sh
-npm install
-```
-
-## Usage
-
-### Install opc-feedback
 
 ```sh
 npm install --save @one-platform/opc-feedback 
 ```
 
+## Usage
 ### For VanillaJS
 - Import component
 ```js
 import '@one-platform/opc-feedback/dist/opc-feedback';
 ```
-- Add component in html
-```html
-<opc-feedback>
-</opc-feedback>
-```
-
-### For Angular
+#### For Angular
 - In your app.module include the `CUSTOM_ELEMENTS_SCHEMA` and import the component
 ```js
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -74,21 +44,25 @@ import '@one-platform/opc-feedback/dist/opc-feedback';
 export class AppModule { }
 ```
 - Add component in any component html template
-```html
-<opc-feedback>
-</opc-feedback>
-```
 
-### For React
+#### For React
 - Import the component in App.js
 ```js
 import '@one-platform/opc-feedback/dist/opc-feedback';
 ```
 
-- Add component in any component html render
+#### Inject the component to the index of your app
+
 ```html
 <opc-feedback>
 </opc-feedback>
+```
+
+### Event Handling
+```opc-feedback``` emits the data on submit operation. You can use the data for sending it to backend.
+
+```js
+document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (data) => console.log(data.detail.data) );
 ```
 
 ### Development server
@@ -114,3 +88,5 @@ npm run test
 ## 🤝 Contributors
 
 👤 **Rigin Oommen**
+
+👤 **Sumeet Ingole**
