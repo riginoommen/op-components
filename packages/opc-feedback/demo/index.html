@@ -15,15 +15,11 @@
     <script src="opc-feedback.js"></script>
 
     <style>
-        .blue opc-feedback {
+        .op-feedback-blue opc-feedback {
             --opc-feedback--BackgroundColor: #0066CC1A;
             --opc-feedback--TextColor: #0066CC;
             --opc-feedback__submitBtnBgColor--BackgroundColor: #0066CC1A;
             --opc-feedback__submitBtnTextColor--TextColor: #0066CC;
-        }
-
-        .code-width {
-            width: 50%;
         }
     </style>
 </head>
@@ -42,7 +38,7 @@
         <h2>Themes</h2>
         <ol>
             <li><code>opc-feedback</code> in red(default) color</li>
-            <div class="pf-c-code-editor pf-m-read-only code-width">
+            <div class="pf-c-code-editor pf-m-read-only pf-u-w-50">
                 <div class="pf-c-code-editor__header">
                   <div class="pf-c-code-editor__controls">
                   </div>
@@ -61,7 +57,7 @@
               </div>
 
             <li><code>opc-feedback</code> in blue color</li>
-            <div class="pf-c-code-editor pf-m-read-only code-width">
+            <div class="pf-c-code-editor pf-m-read-only pf-u-w-50">
                 <div class="pf-c-code-editor__header">
                   <div class="pf-c-code-editor__controls">
                   </div>
@@ -75,7 +71,7 @@
                 <div class="pf-c-code-editor__main">
                   <div class="pf-c-code-editor__code">
                     <pre class="pf-c-code-editor__code-pre">
-&lt;div class="blue"&gt;
+&lt;div class="op-blue"&gt;
     &nbsp;&lt;opc-feedback&gt;&lt;/opc-feedback&gt;
 &lt;/div&gt;</pre>
                   </div>
@@ -85,7 +81,7 @@
         <h2>Event Handling</h2>
         <ol>
             <li>Obtaining the data from <code>opc-feedback</code> Component after the component action is initiated</li>
-            <div class="pf-c-code-editor pf-m-read-only code-width">
+            <div class="pf-c-code-editor pf-m-read-only pf-u-w-50">
                 <div class="pf-c-code-editor__header">
                   <div class="pf-c-code-editor__controls">
                   </div>
@@ -105,6 +101,9 @@ document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (da
               </div>
         </ol>
     </div>
+    <script>
+        document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (data) => console.log(data.detail.data));
+    </script>
 </body>
 
 </html>

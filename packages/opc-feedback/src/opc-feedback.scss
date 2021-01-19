@@ -34,7 +34,6 @@ $variables: (
   padding: .5rem 1.25rem;
   font-size: 1rem;
   cursor: pointer;
-
   border-radius: 2rem;
   border-bottom-right-radius: .25rem;
   box-shadow: 0 .25rem .5rem rgba(0,0,0,.16);
@@ -91,24 +90,8 @@ $variables: (
   text-align: center;
 }
 
-.feedback-subtitle {
+.op-feedback__subtitle {
   color: var(--pf-global--Color--200);
-}
-
-.feedback-chip {
-  --pf-c-chip--BorderRadius: 15px;
-  margin: 4px;
-}
-.feedback-chip:hover {
-  cursor: pointer;
-}
-
-.feedback-chip-active {
-  --pf-c-chip--BackgroundColor:#0066CC1A !important;
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 .pf-c-button {
@@ -116,9 +99,18 @@ $variables: (
   color: opc-get-var(TextColor, $opc-color--white, submitBtnTextColor);
 }
 
-.blue opc-feedback {
-  --opc-feedback--BackgroundColor: #0066CC1A;
-  --opc-feedback--TextColor: #0066CC;
-  --opc-feedback__submitBtnBgColor--BackgroundColor: #0066CC1A;
-  --opc-feedback__submitBtnTextColor--TextColor: #0066CC;
+.op-feedback-chip {
+  --pf-c-chip--BorderRadius: 15px;
+  margin: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.op-feedback-chip__active {
+  --pf-c-chip--BackgroundColor:#0066CC1A !important;
+}
+
+.op-feedback__subtitle.pf-u-text-align-center.pf-u-p-xs {
+  cursor: pointer;
 }
