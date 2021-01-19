@@ -110,7 +110,15 @@ $variables: (
 .pointer {
   cursor: pointer;
 }
+
 .pf-c-button {
   background-color: opc-get-var(BackgroundColor, $opc-color--red-200, submitBtnBgColor);
   color: opc-get-var(TextColor, $opc-color--white, submitBtnTextColor);
+}
+
+.blue opc-feedback {
+  --opc-feedback--BackgroundColor: #0066CC1A;
+  --opc-feedback--TextColor: #0066CC;
+  --opc-feedback__submitBtnBgColor--BackgroundColor: #0066CC1A;
+  --opc-feedback__submitBtnTextColor--TextColor: #0066CC;
 }

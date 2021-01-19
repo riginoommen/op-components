@@ -13,12 +13,17 @@
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/ionicons/ionicons.js"></script>
     <script src="opc-feedback.js"></script>
+
     <style>
         .blue opc-feedback {
             --opc-feedback--BackgroundColor: #0066CC1A;
             --opc-feedback--TextColor: #0066CC;
             --opc-feedback__submitBtnBgColor--BackgroundColor: #0066CC1A;
             --opc-feedback__submitBtnTextColor--TextColor: #0066CC;
+        }
+
+        .code-width {
+            width: 50%;
         }
     </style>
 </head>
@@ -30,34 +35,76 @@
             <h1>opc-feedback Component</h1>
         </header>
         <p><code>opc-feedback</code> component enables to collect the feedback from the user.</p>
-
+        <h2>Supported Params</h2>
+        <ol>
+            <li><code>url</code> - URL of your hosted feedback spa. By default <code>/feedback</code> is the url.</li>
+        </ol>
         <h2>Themes</h2>
         <ol>
             <li><code>opc-feedback</code> in red(default) color</li>
-            <code>
-                &lt;opc-feedback&gt;&lt;/opc-feedback&gt;
-            </code>
+            <div class="pf-c-code-editor pf-m-read-only code-width">
+                <div class="pf-c-code-editor__header">
+                  <div class="pf-c-code-editor__controls">
+                  </div>
+                  <div class="pf-c-code-editor__tab">
+                    <span class="pf-c-code-editor__tab-icon">
+                      <i class="fas fa-code"></i>
+                    </span>
+                    <span class="pf-c-code-editor__tab-text">HTML</span>
+                  </div>
+                </div>
+                <div class="pf-c-code-editor__main">
+                  <div class="pf-c-code-editor__code">
+                    <pre class="pf-c-code-editor__code-pre">&nbsp;&lt;opc-feedback&gt;&lt;/opc-feedback&gt;</pre>
+                  </div>
+                </div>
+              </div>
 
             <li><code>opc-feedback</code> in blue color</li>
-            <code>
-                &lt;div class="blue"&gt;<br/>
-                &nbsp;&lt;opc-feedback&gt;&lt;/opc-feedback&gt;<br/>
-                &lt;/div&gt;
-            </code>
+            <div class="pf-c-code-editor pf-m-read-only code-width">
+                <div class="pf-c-code-editor__header">
+                  <div class="pf-c-code-editor__controls">
+                  </div>
+                  <div class="pf-c-code-editor__tab">
+                    <span class="pf-c-code-editor__tab-icon">
+                      <i class="fas fa-code"></i>
+                    </span>
+                    <span class="pf-c-code-editor__tab-text">HTML</span>
+                  </div>
+                </div>
+                <div class="pf-c-code-editor__main">
+                  <div class="pf-c-code-editor__code">
+                    <pre class="pf-c-code-editor__code-pre">
+&lt;div class="blue"&gt;
+    &nbsp;&lt;opc-feedback&gt;&lt;/opc-feedback&gt;
+&lt;/div&gt;</pre>
+                  </div>
+                </div>
+              </div>
         </ol>
         <h2>Event Handling</h2>
         <ol>
             <li>Obtaining the data from <code>opc-feedback</code> Component after the component action is initiated</li>
-            <code>
-                document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (data) => console.log(data.detail.data));
-            </code>
+            <div class="pf-c-code-editor pf-m-read-only code-width">
+                <div class="pf-c-code-editor__header">
+                  <div class="pf-c-code-editor__controls">
+                  </div>
+                  <div class="pf-c-code-editor__tab">
+                    <span class="pf-c-code-editor__tab-icon">
+                      <i class="fas fa-code"></i>
+                    </span>
+                    <span class="pf-c-code-editor__tab-text">Javascript</span>
+                  </div>
+                </div>
+                <div class="pf-c-code-editor__main">
+                  <div class="pf-c-code-editor__code">
+                    <pre class="pf-c-code-editor__code-pre">
+document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (data) => console.log(data.detail.data));</pre>
+                  </div>
+                </div>
+              </div>
         </ol>
     </div>
-    <script>
-        document.querySelector('opc-feedback').addEventListener('opc-feedback:emit', (data) => {
-            console.log(data.detail.data);
-        });
-    </script>
 </body>
 
 </html>

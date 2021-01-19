@@ -35,7 +35,7 @@ describe('opc-feedback', () => {
     expect(opcFeedbackPanelElement.url).toEqual('/feedback');
   });
 
-  it('can initiate url', async () => {
+  it('can initiate url for spa', async () => {
     opcFeedbackPanelElement.url = 'https://example.com';
     await opcFeedbackPanelElement.updateComplete;
     expect(opcFeedbackPanelElement.url).toEqual('https://example.com');
