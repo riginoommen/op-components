@@ -18,6 +18,7 @@ import { repeat } from 'lit-html/directives/repeat.js';
 import { defaultTemplate } from './defaultTemplate';
 import { arrowBackIcon, bugIcon, chatboxIcon, documentIcon, openLinkIcon, chatBubblesIcon } from './assets';
 import dialogPolyfill from 'dialog-polyfill';
+
 @customElement('opc-feedback')
 export class OpcFeedback extends LitElement {
   @property({ type: String, attribute: 'spa' }) spa = "/feedback";
@@ -122,10 +123,10 @@ export class OpcFeedback extends LitElement {
     return this.template;
   }
   updated() {
-    dialogPolyfill.registerDialog(document.getElementById('opc-feedback').shadowRoot.getElementById('initial-dialog') as any);
-    dialogPolyfill.registerDialog(document.getElementById('opc-feedback').shadowRoot.getElementById('bug-dialog') as any);
-    dialogPolyfill.registerDialog(document.getElementById('opc-feedback').shadowRoot.getElementById('feedback-dialog') as any);
-    dialogPolyfill.registerDialog(document.getElementById('opc-feedback').shadowRoot.getElementById('confirmation-dialog') as any);
+    dialogPolyfill.registerDialog(this.shadowRoot.getElementById('initial-dialog') as any);
+    dialogPolyfill.registerDialog(this.shadowRoot.getElementById('bug-dialog') as any);
+    dialogPolyfill.registerDialog(this.shadowRoot.getElementById('feedback-dialog') as any);
+    dialogPolyfill.registerDialog(this.shadowRoot.getElementById('confirmation-dialog') as any);
   }
 
   render() {
